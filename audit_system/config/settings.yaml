@@ -1,0 +1,26 @@
+# 全局配置
+
+# 路径配置
+paths:
+  image_dir: ./images
+  ocr_output: data/raw
+  report_output: output/reports
+  log_output: output/logs
+
+# OCR配置
+ocr:
+  model: paddleocr
+  lang: ch
+  use_angle_cls: true
+
+# 审计配置
+audit:
+  sample_rate: 0.3  # 抽样比例
+  risk_threshold: 3.0  # 风险阈值
+
+# LLM配置
+llm:
+  model: glm-4
+  api_key: YOUR_API_KEY
+  max_tokens: 1000
+  temperature: 0.7

@@ -1,0 +1,22 @@
+# 基础依赖
+pandas==2.1.4
+openpyxl==3.1.2
+pyyaml==6.0.1
+requests==2.31.0
+
+# OCR依赖
+paddlepaddle==2.5.2
+paddleocr==2.7.0.3
+
+# GLM-OCR依赖
+transformers==4.40.0
+torch==2.2.0
+tqdm==4.66.0
+
+# 报告生成（可选）
+markdown==3.5.1
+pdfkit==1.0.0
+
+# 其他工具
+Pillow==10.1.0
+numpy==1.26.2

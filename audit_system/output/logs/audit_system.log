@@ -1,0 +1,57 @@
+2026-04-09 10:16:13,227 - __main__ - INFO - ======================================================================
+2026-04-09 10:16:13,227 - __main__ - INFO -           财务审计智能系统 - 开始运行
+2026-04-09 10:16:13,227 - __main__ - INFO - ======================================================================
+2026-04-09 10:16:18,007 - __main__ - INFO - 步骤1: 开始执行 OCR 识别...
+2026-04-09 10:24:17,445 - __main__ - INFO - ✅ OCR 处理完成，输出文件: data\raw\ocr_output.xlsx
+2026-04-09 10:24:17,445 - __main__ - INFO - 步骤2: 开始执行审计分析流程...
+2026-04-09 10:24:17,446 - agent.llm_adapter - INFO - ✅ LLMAdapter 初始化完成，使用 GLM-4 模型
+2026-04-09 10:24:17,446 - agent.orchestrator - INFO - ✅ Orchestrator 初始化完成，所有模块已加载
+2026-04-09 10:24:17,446 - agent.orchestrator - INFO - 🚀 开始审计流程，输入文件: data\raw\ocr_output.xlsx
+2026-04-09 10:24:17,466 - core.data_loader - INFO - 成功读取 Excel 文件: data\raw\ocr_output.xlsx，共 70 行
+2026-04-09 10:24:17,486 - core.data_loader - INFO - 数据标准化完成
+2026-04-09 10:24:17,487 - agent.orchestrator - INFO - ✅ 成功加载 70 条凭证记录
+2026-04-09 10:24:19,624 - agent.llm_adapter - ERROR - LLM 请求异常: HTTPSConnectionPool(host='api.zhipuai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2026-04-09 10:24:22,622 - agent.llm_adapter - ERROR - LLM 请求异常: HTTPSConnectionPool(host='api.zhipuai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2026-04-09 10:24:26,482 - agent.llm_adapter - ERROR - LLM 请求异常: HTTPSConnectionPool(host='api.zhipuai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)')))
+2026-04-09 10:24:26,483 - agent.llm_adapter - ERROR - LLM 调用多次失败，返回默认提示
+2026-04-09 10:24:26,484 - agent.orchestrator - INFO - 🎉 审计流程执行完成！报告路径：output\reports\audit_report_20260409_102426.md
+2026-04-09 10:24:26,484 - __main__ - INFO - ======================================================================
+2026-04-09 10:24:26,484 - __main__ - INFO - 🎉 完整审计流程执行成功！
+2026-04-09 10:24:26,484 - __main__ - INFO - 📄 审计报告路径: output\reports\audit_report_20260409_102426.md
+2026-04-09 10:24:26,484 - __main__ - INFO - ======================================================================
+2026-04-09 11:47:42,652 - __main__ - INFO - ======================================================================
+2026-04-09 11:47:42,652 - __main__ - INFO -           财务审计智能系统 - 开始运行
+2026-04-09 11:47:42,652 - __main__ - INFO - ======================================================================
+2026-04-09 11:47:46,225 - __main__ - INFO - 步骤1: 开始执行 OCR 识别...
+2026-04-09 11:58:13,185 - __main__ - INFO - ✅ OCR 处理完成，输出文件: data\raw\ocr_output.xlsx
+2026-04-09 11:58:13,185 - __main__ - INFO - 步骤2: 开始执行审计分析流程...
+2026-04-09 11:58:13,185 - agent.llm_adapter - INFO - ✅ LLMAdapter 初始化完成，使用智谱 BigModel (GLM-4)
+2026-04-09 11:58:13,185 - agent.orchestrator - INFO - ✅ Orchestrator 初始化完成，所有模块已加载
+2026-04-09 11:58:13,185 - agent.orchestrator - INFO - 🚀 开始审计流程，输入文件: data\raw\ocr_output.xlsx
+2026-04-09 11:58:13,202 - core.data_loader - INFO - 成功读取 Excel 文件: data\raw\ocr_output.xlsx，共 70 行
+2026-04-09 11:58:13,217 - core.data_loader - INFO - 数据标准化完成
+2026-04-09 11:58:13,217 - agent.orchestrator - INFO - ✅ 成功加载 70 条凭证记录
+2026-04-09 11:58:17,098 - agent.llm_adapter - INFO - ✅ GLM 调用成功 (模型: glm-4)
+2026-04-09 11:58:17,101 - agent.orchestrator - INFO - 🎉 审计流程执行完成！报告路径：output\reports\audit_report_20260409_115817.md
+2026-04-09 11:58:17,101 - __main__ - INFO - ======================================================================
+2026-04-09 11:58:17,102 - __main__ - INFO - 🎉 完整审计流程执行成功！
+2026-04-09 11:58:17,102 - __main__ - INFO - 📄 审计报告路径: output\reports\audit_report_20260409_115817.md
+2026-04-09 11:58:17,102 - __main__ - INFO - ======================================================================
+2026-04-10 18:28:32,154 - __main__ - INFO - ======================================================================
+2026-04-10 18:28:32,154 - __main__ - INFO -           财务审计智能系统 - 开始运行
+2026-04-10 18:28:32,154 - __main__ - INFO - ======================================================================
+2026-04-10 18:28:37,415 - __main__ - INFO - 步骤1: 开始执行 OCR 识别...
+2026-04-10 18:36:29,375 - __main__ - INFO - ✅ OCR 处理完成，输出文件: data\raw\ocr_output.xlsx
+2026-04-10 18:36:29,375 - __main__ - INFO - 步骤2: 开始执行审计分析流程...
+2026-04-10 18:36:29,375 - agent.llm_adapter - INFO - ✅ LLMAdapter 初始化完成，使用智谱 BigModel (GLM-4)
+2026-04-10 18:36:29,375 - agent.orchestrator - INFO - ✅ Orchestrator 初始化完成，所有模块已加载
+2026-04-10 18:36:29,375 - agent.orchestrator - INFO - 🚀 开始审计流程，输入文件: data\raw\ocr_output.xlsx
+2026-04-10 18:36:29,394 - core.data_loader - INFO - 成功读取 Excel 文件: data\raw\ocr_output.xlsx，共 70 行
+2026-04-10 18:36:29,415 - core.data_loader - INFO - 数据标准化完成
+2026-04-10 18:36:29,415 - agent.orchestrator - INFO - ✅ 成功加载 70 条凭证记录
+2026-04-10 18:36:34,522 - agent.llm_adapter - INFO - ✅ GLM 调用成功 (模型: glm-4)
+2026-04-10 18:36:34,525 - agent.orchestrator - INFO - 🎉 审计流程执行完成！报告路径：output\reports\审计报告_20260410_183634.md
+2026-04-10 18:36:34,526 - __main__ - INFO - ======================================================================
+2026-04-10 18:36:34,527 - __main__ - INFO - 🎉 完整审计流程执行成功！
+2026-04-10 18:36:34,527 - __main__ - INFO - 📄 审计报告路径: output\reports\审计报告_20260410_183634.md
+2026-04-10 18:36:34,527 - __main__ - INFO - ======================================================================

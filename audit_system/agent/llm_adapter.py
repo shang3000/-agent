@@ -10,7 +10,7 @@ class LLMAdapter:
 
     def __init__(self):
         # 请确保这里填的是你最新的智谱 Key（以 9187 开头）
-        self.api_key = "9187510626ea49ef834d368b8dcf5cb5.8xMJipn3hYrfBSK3"  # ←←← 确认是这个
+        self.api_key = "API.key"  # ←←← 确认是这个
         self.api_url = "https://open.bigmodel.cn/api/paas/v4/chat/completions"  # 智谱官方推荐地址
         self.timeout = 90
         self.max_retries = 2

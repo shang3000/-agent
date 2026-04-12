@@ -1,0 +1,36 @@
+# 依赖目录
+.venv/
+env/
+
+# 数据文件
+data/
+output/
+
+# 模型文件
+models/
+
+# 缓存文件
+__pycache__/
+*.pyc
+
+# IDE文件
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 日志文件
+*.log
+
+# 测试文件
+*test*.py
+
+# 临时文件
+*.tmp
+*.temp
+
+# Windows文件
+Thumbs.db
+
+# Mac文件
+.DS_Store

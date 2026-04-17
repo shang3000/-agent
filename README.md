@@ -1,11 +1,11 @@
-# 审计系统
+# 抽凭辅助系统
 
-一个基于OCR和大语言模型的智能审计系统，能够自动处理财务凭证、检测风险并生成审计报告。
+一个基于OCR和大语言模型的智能抽凭辅助系统，能够自动处理财务凭证、检测风险并生成抽凭报告。
 
 ## 项目结构
 
 ```
-audit_system/
+sampling_assistant_system/
 ├── src/                  # 代码目录
 │   ├── agent/           # Agent层（大模型调度）
 │   ├── config/          # 配置目录
@@ -27,9 +27,9 @@ audit_system/
 ## 功能特点
 
 - **OCR识别**：使用GLM-OCR模型自动识别财务凭证
-- **智能分析**：集成GLM大语言模型进行深度审计分析
+- **智能分析**：集成GLM大语言模型进行深度抽凭分析
 - **风险检测**：自动检测异常交易和风险点
-- **报告生成**：生成结构化的Markdown审计报告
+- **报告生成**：生成结构化的Markdown抽凭报告
 - **批量处理**：支持批量处理多张凭证图片
 
 ## 快速开始
@@ -68,12 +68,12 @@ python run.py
 - **utils.py**：图片处理和OCR结果清洗
 
 ### 2. Agent层
-- **orchestrator.py**：总流程控制，调度整个审计过程
+- **orchestrator.py**：总流程控制，调度整个抽凭过程
 - **llm_adapter.py**：GLM API封装，用于深度分析
 
 ### 3. 业务逻辑层
 - **data_loader.py**：Excel读取和数据标准化
-- **sampler.py**：数据抽样逻辑
+- **sampler.py**：数据抽凭逻辑
 - **risk_engine.py**：风险检测引擎
 - **stats.py**：数据统计分析
 - **report.py**：报告生成

@@ -1,5 +1,5 @@
 """
-审计系统主入口 - 一键运行完整流程
+抽凭辅助系统主入口 - 一键运行完整流程
 OCR处理 → 数据加载 → 风险检测 → LLM分析 → 生成报告
 """
 
@@ -15,7 +15,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(log_dir / "audit_system.log", encoding='utf-8'),
+        logging.FileHandler(log_dir / "sampling_assistant.log", encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 def main():
     """主入口函数"""
     logger.info("=" * 70)
-    logger.info("          财务审计智能系统 - 开始运行")
+    logger.info("          财务抽凭智能系统 - 开始运行")
     logger.info("=" * 70)
 
     try:
@@ -43,19 +43,19 @@ def main():
 
         logger.info(f"✅ OCR 处理完成，输出文件: {ocr_output_path}")
 
-        # 3. 执行审计分析流程
-        logger.info("步骤2: 开始执行审计分析流程...")
+        # 3. 执行抽凭分析流程
+        logger.info("步骤2: 开始执行抽凭分析流程...")
         orchestrator = Orchestrator()
 
-        report_path = orchestrator.run_audit(ocr_output_path)
+        report_path = orchestrator.run_sampling(ocr_output_path)
 
         if report_path:
             logger.info("=" * 70)
-            logger.info("🎉 完整审计流程执行成功！")
-            logger.info(f"📄 审计报告路径: {report_path}")
+            logger.info("🎉 完整抽凭流程执行成功！")
+            logger.info(f"📄 抽凭报告路径: {report_path}")
             logger.info("=" * 70)
         else:
-            logger.warning("审计流程执行完成，但报告生成可能有问题")
+            logger.warning("抽凭流程执行完成，但报告生成可能有问题")
 
     except FileNotFoundError as e:
         logger.error(f"❌ 文件或路径不存在: {e}")

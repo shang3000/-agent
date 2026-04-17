@@ -1,7 +1,7 @@
-# 审计分析Prompt
+# 抽凭分析Prompt
 
 # 风险分析Prompt
-audit_risk_prompt = """请对以下财务数据进行风险分析：
+sampling_risk_prompt = """请对以下财务数据进行风险分析：
 
 1. 数据概览：
 {data_overview}
@@ -15,12 +15,12 @@ audit_risk_prompt = """请对以下财务数据进行风险分析：
 3. 分析要求：
 - 识别潜在风险点
 - 提供风险等级评估
-- 给出审计建议
+- 给出抽凭建议
 - 生成风险分析报告
 """
 
 # 内部控制评估Prompt
-internal_control_prompt = """请对以下内部控制情况进行评估：
+sampling_control_prompt = """请对以下内部控制情况进行评估：
 
 1. 流程描述：
 {process_description}

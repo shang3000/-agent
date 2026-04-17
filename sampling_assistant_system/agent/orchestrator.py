@@ -1,5 +1,5 @@
 """
-审计总流程控制器（Orchestrator）
+抽凭总流程控制器（Orchestrator）
 负责协调 OCR 输出 → 数据处理 → 风险分析 → LLM深度分析 → 报告生成
 """
 
@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 class Orchestrator:
-    """审计流程总控制器"""
+    """抽凭流程总控制器"""
 
     def __init__(self):
         """初始化各个核心模块"""
@@ -28,9 +28,9 @@ class Orchestrator:
 
         logger.info("✅ Orchestrator 初始化完成，所有模块已加载")
 
-    def run_audit(self, ocr_output_path: str = None):
+    def run_sampling(self, ocr_output_path: str = None):
         """
-        执行完整审计流程
+        执行完整抽凭流程
 
         Args:
             ocr_output_path: OCR输出的Excel文件路径，默认为 data/raw/ocr_output.xlsx
@@ -38,7 +38,7 @@ class Orchestrator:
         if ocr_output_path is None:
             ocr_output_path = "data/raw/ocr_output.xlsx"
 
-        logger.info(f"🚀 开始审计流程，输入文件: {ocr_output_path}")
+        logger.info(f"🚀 开始抽凭流程，输入文件: {ocr_output_path}")
 
         # 1. 读取 OCR 输出数据
         data = self.data_loader.load_excel(ocr_output_path)
@@ -70,14 +70,14 @@ class Orchestrator:
             llm_analysis=llm_analysis
         )
 
-        logger.info(f"🎉 审计流程执行完成！报告路径：{report_path}")
-        print(f"🎉 审计流程执行完成！报告路径：{report_path}")
+        logger.info(f"🎉 抽凭流程执行完成！报告路径：{report_path}")
+        print(f"🎉 抽凭流程执行完成！报告路径：{report_path}")
 
         return report_path
 
     def _analyze_with_llm(self, data, risk_results, stats_results):
         """使用 GLM-4 进行深度智能分析"""
-        prompt = f"""你是一位经验丰富的财务审计专家，请基于以下信息给出专业、客观的审计分析报告：
+        prompt = f"""你是一位经验丰富的财务抽凭专家，请基于以下信息给出专业、客观的抽凭分析报告：
 
 【数据概览】
 {stats_results}

@@ -4,25 +4,25 @@ from datetime import datetime
 import pandas as pd
 
 class Report:
-    """专业审计报告生成器（基于 OCR 输出自动生成）"""
+    """专业抽凭报告生成器（基于 OCR 输出自动生成）"""
 
     def __init__(self):
         self.company_name = "XX家居制造有限公司"   # ←←← 修改成你的实际公司名称
 
     def generate_report(self, data: pd.DataFrame, risk_results=None, stats_results=None, llm_analysis=None):
-        """生成专业审计报告"""
+        """生成专业抽凭报告"""
         output_dir = Path('output/reports')
         output_dir.mkdir(parents=True, exist_ok=True)
 
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        report_file = output_dir / f'审计报告_{timestamp}.md'
+        report_file = output_dir / f'抽凭报告_{timestamp}.md'
 
         markdown_content = self._generate_professional_markdown(data, risk_results, stats_results, llm_analysis)
 
         with open(report_file, 'w', encoding='utf-8') as f:
             f.write(markdown_content)
 
-        print(f"✅ 专业审计报告生成完成：{report_file}")
+        print(f"✅ 专业抽凭报告生成完成：{report_file}")
         return str(report_file)
 
     def _generate_professional_markdown(self, data, risk_results, stats_results, llm_analysis):
@@ -30,7 +30,7 @@ class Report:
 
         # ================== 标题抬头 ==================
         content.append(f"# {self.company_name}")
-        content.append("\n**2020年10月财务报表及审计抽凭资料**")
+        content.append("\n**2020年10月财务报表及抽凭资料**")
         content.append(f"\n编制基础：基于 {len(data)} 张记账凭证（假设期初余额为零）")
         content.append("\n---\n")
 
@@ -55,8 +55,8 @@ class Report:
         content.append("| **净利润** | **16,286,369** |")
         content.append("\n")
 
-        # ================== 二、资产负债表 ==================
-        content.append("## 二、2020年10月31日资产负债表\n")
+        # ================== 五、资产负债表 ==================
+        content.append("## 五、2020年10月31日资产负债表\n")
         content.append("| 资产 | 期末余额(元) | 负债及所有者权益 | 期末余额(元) |")
         content.append("|------|--------------|------------------|--------------|")
         content.append("| 货币资金 | 34,257,764 | 应付账款 | 58,977,800 |")
@@ -89,8 +89,8 @@ class Report:
         content.append("| 公益性捐赠 | 营业外支出 | 3,800,000 | 合规票据 |")
         content.append("\n")
 
-        # ================== 五、风险导向审计抽凭重点 ==================
-        content.append("## 五、风险导向审计抽凭重点")
+        # ================== 五、风险导向抽凭重点 ==================
+        content.append("## 五、风险导向抽凭重点")
         content.append("| 凭证号 | 日期 | 摘要 | 风险类型 |")
         content.append("|--------|------|------|----------|")
         content.append("| 记字001 | 10/02 | 提取备用金300万 | 大额现金 |")
